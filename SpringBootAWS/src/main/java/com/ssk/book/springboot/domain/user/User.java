@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class User extends BaseTimeEntity{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment
 	private Long id;
 	
 	@Column(nullable = false)
