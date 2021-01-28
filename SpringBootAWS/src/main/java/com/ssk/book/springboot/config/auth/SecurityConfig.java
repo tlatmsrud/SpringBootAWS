@@ -18,7 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception{
 		http
 			.csrf().disable() 
-			.headers().frameOptions().disable()
+			.headers().frameOptions().disable() //h2-console 화면을 사용하기 위해 위 옵션들을 disable 처리.
 		.and()
 			.authorizeRequests()
 			.antMatchers("/","/css/**","/images/**","/js/**","/h2-console/**").permitAll()
